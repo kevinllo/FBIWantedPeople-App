@@ -1,0 +1,31 @@
+@import "../../styles/global.scss";
+
+.mainNav {
+  background-color: $nav-color;
+  color: white;
+  &__items {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+/*     outline: 1px solid white; */
+    &--logo {
+      /*    outline: 1px solid white; */
+      padding: 10px;
+      width: 100px;
+      height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--title {
+      margin-left: 10px;
+      /*     outline: 1px solid white; */
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
