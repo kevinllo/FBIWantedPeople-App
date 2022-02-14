@@ -1,28 +1,44 @@
 @import "../../styles/global.scss";
 
 .mainNav {
-  background-color: $nav-color;
+  /*   background-color: $nav-color; */
+  height: 100px;
+  background-image: url("../../assets/banner.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
   &__items {
     margin: 0 auto;
     width: 90%;
+    height: 100%;
     display: flex;
     align-items: center;
     &--logo {
-      padding: 10px;
-      width: 90px;
-      height: 90px;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      cursor: pointer;
+      @media (min-width: $s-screen) {
+        width: 70px;
+        height: 70px;
+      }
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
     &--title {
-      margin-left: 10px;
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
+    }
+    &--titleDescription {
+      font-size: 0.95em;
+      padding-left: 7px;
+      /*   */
+      width: 11em;
     }
   }
 }
