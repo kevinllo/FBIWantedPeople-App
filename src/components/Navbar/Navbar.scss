@@ -1,8 +1,7 @@
 @import "../../styles/global.scss";
 
 .mainNav {
-  /*   background-color: $nav-color; */
-  height: 100px;
+  height: 90px;
   background-image: url("../../assets/banner.png");
   background-position: center;
   background-size: cover;
@@ -37,7 +36,6 @@
     &--titleDescription {
       font-size: 0.95em;
       padding-left: 7px;
-      /*   */
       width: 11em;
     }
   }

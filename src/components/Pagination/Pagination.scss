@@ -1,0 +1,25 @@
+@import "../../styles/global.scss";
+.mainContainer__pagination {
+  width: 100%;
+  &--ul {
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    gap: 1.2rem;
+
+    @media (max-width: $m-screen) {
+      justify-content: center;
+      margin-top: 14px;
+    }
+  }
+  &--ul--li--link {
+    padding: 0 8px;
+  }
+  &--ul--li--link--active {
+    background-color: #11579b;
+    border-radius: 3px;
+    color: white;
+  }
+}
