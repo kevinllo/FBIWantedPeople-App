@@ -2,7 +2,19 @@ import React from "react";
 import ReactPaginate from "react-paginate";
 import "./Pagination.scss";
 
-const Pagination = ({ handlePageClick }) => {
+const Pagination = ({ setWantedPeople }) => {
+  const fetchWantedPeoplePerPage = async (currentPage) => {
+    const response = await fetch(
+      `https://api.fbi.gov/@wanted?pageSize=10&page=${currentPage}`
+    );
+    const data = await response.json();
+    return data;
+  };
+  const handlePageClick = async (data) => {
+    let currentPage = data.selected + 1;
+    const wantedPeoplePerPage = await fetchWantedPeoplePerPage(currentPage);
+    setWantedPeople(wantedPeoplePerPage.items);
+  };
   return (
     <div className="mainContainer__pagination">
       <ReactPaginate

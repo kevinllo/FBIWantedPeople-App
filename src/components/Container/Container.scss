@@ -27,7 +27,7 @@
       width: 100%;
       display: flex;
       justify-content: flex-start;
-      gap: .5rem;
+      gap: 0.5rem;
       @media (max-width: $m-screen) {
         justify-content: center;
       }
@@ -43,7 +43,7 @@
       cursor: pointer;
     }
   }
-  &__grid {
+  .mainContainer__grid {
     width: 70%;
     display: grid;
     grid-template-columns: 1fr;
@@ -61,36 +61,6 @@
     }
     @media (min-width: $xl-screen) {
       grid-template-columns: repeat(5, 1fr);
-    }
-    &--cards {
-      cursor: pointer;
-    }
-    &--cards--img {
-      overflow: hidden;
-      width: 100%;
-      height: 275px;
-      border-radius: 1rem;
-      margin-bottom: 18px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      img {
-        height: 100%;
-        width: 100%;
-        border-radius: inherit;
-        object-fit: cover;
-      }
-    }
-    p {
-      height: 20px;
-      width: 150px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-      font-weight: 700;
-      @media (max-width: $s-screen) {
-        width: 180px;
-      }
     }
   }
 }

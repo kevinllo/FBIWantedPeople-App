@@ -1,0 +1,32 @@
+@import "../../styles/global.scss";
+
+.mainContainer__grid--cards {
+  cursor: pointer;
+}
+.mainContainer__grid--cards--img {
+  overflow: hidden;
+  width: 100%;
+  height: 275px;
+  border-radius: 1rem;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+}
+p {
+  height: 20px;
+  width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  @media (max-width: $s-screen) {
+    width: 180px;
+  }
+}
