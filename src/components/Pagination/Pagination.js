@@ -16,20 +16,20 @@ const Pagination = ({ setWantedPeople }) => {
     setWantedPeople(wantedPeoplePerPage.items);
   };
   return (
-    <div className="mainContainer__pagination">
-      <ReactPaginate
-        previousLabel={"<"}
-        nextLabel={">"}
-        pageCount={10}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={1}
-        containerClassName={"mainContainer__pagination--ul"}
-        pageClassName={"mainContainer__pagination--ul--li"}
-        pageLinkClassName={"mainContainer__pagination--ul--li--link"}
-        activeClassName={"mainContainer__pagination--ul--li--link--active"}
-        onPageChange={handlePageClick}
-      />
-    </div>
+    <ReactPaginate
+      previousLabel={"← Previous"}
+      nextLabel={"Next →"}
+      pageCount={10}
+      marginPagesDisplayed={2}
+      pageRangeDisplayed={4}
+      containerClassName={"mainContainer__pagination"}
+      pageClassName={"mainContainer__pagination__li"}
+      activeClassName={"mainContainer__pagination__li--active"}
+      onPageChange={handlePageClick}
+      breakClassName={"mainContainer__pagination__li--break"}
+      nextClassName={"mainContainer__pagination__li--next"}
+      previousClassName={"mainContainer__pagination__li--prev"}
+    />
   );
 };
 

@@ -1,25 +1,67 @@
 @import "../../styles/global.scss";
 .mainContainer__pagination {
-  width: 100%;
-  &--ul {
-    list-style: none;
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-    gap: 1.2rem;
-
-    @media (max-width: $m-screen) {
-      justify-content: center;
-      margin-top: 14px;
+  width: 90%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  overflow-x: scroll;
+  font-weight: 600;
+  cursor: pointer;
+  
+  @media (min-width: $m-screen) {
+    overflow-x: hidden;
+    justify-content: center;
+  }
+  &__li {
+    min-width: 30px;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 4px 0px;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    a {
+      padding: 2px 8px;
     }
-  }
-  &--ul--li--link {
-    padding: 0 8px;
-  }
-  &--ul--li--link--active {
-    background-color: #11579b;
-    border-radius: 3px;
-    color: white;
+
+    &--next {
+      margin-right: 0.5rem;
+      padding: 4px 0px;
+      min-width: 100px;
+      text-align: center;
+      background-color: #154a7b;
+      color: white;
+      border-radius: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        padding: 2px 22px;
+      }
+    }
+    &--prev {
+      margin-right: 0.5rem;
+      padding: 4px 0px;
+      min-width: 100px;
+      text-align: center;
+      background-color: #154a7b;
+      color: white;
+      border-radius: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        padding: 2px 9px;
+      }
+    }
+    &--active {
+      background-color: #154a7b;
+      border: none;
+      color: white;
+    }
+    &--break {
+      margin-right: 0.5rem;
+    }
   }
 }

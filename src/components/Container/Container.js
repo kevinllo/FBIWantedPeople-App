@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Pagination from "../Pagination/Pagination";
 import Card from "../Card/Card";
 import "./Container.scss";
+
 const Container = () => {
   const [wantedPeople, setWantedPeople] = useState([]);
   useEffect(() => {
@@ -20,18 +21,17 @@ const Container = () => {
         <h1>Most Wanted</h1>
       </div>
       <div className="mainContainer__buttons">
-        <div className="mainContainer__buttons--filters">
-          <button>All</button>
-          <button>Main</button>
-          <button>Victim</button>
-        </div>
-        <Pagination setWantedPeople={setWantedPeople} />
+        <button>All</button>
+        <button>Main</button>
+        <button>Victim</button>
+
       </div>
       <div className="mainContainer__grid">
-        {wantedPeople.map((items) => {
-          return <Card items={items} key={items.uid} />;
+        {wantedPeople.map((data) => {
+          return <Card data={data} key={data.uid} />;
         })}
       </div>
+        <Pagination setWantedPeople={setWantedPeople} />
     </main>
   );
 };

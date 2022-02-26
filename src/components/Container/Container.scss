@@ -2,7 +2,6 @@
 
 .mainContainer {
   width: 100%;
-  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,29 +16,18 @@
   &__buttons {
     width: 60%;
     display: flex;
+    justify-content: flex-start;
     @media (max-width: $l-screen) {
       width: 70%;
     }
-    @media (max-width: $m-screen) {
-      flex-direction: column;
-    }
-    &--filters {
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      gap: 0.5rem;
-      @media (max-width: $m-screen) {
-        justify-content: center;
-      }
-      button {
-        width: 70px;
-        color: black;
-        background-color: transparent;
-        border: 2px solid $buttons-colors;
-        border-radius: 50px;
-        font-weight: 700;
-        cursor: pointer;
-      }
+    button {
+      margin-right: 10px;
+      width: 70px;
+      color: black;
+      background-color: transparent;
+      border: 2px solid $buttons-colors;
+      border-radius: 50px;
+      font-weight: 700;
       cursor: pointer;
     }
   }

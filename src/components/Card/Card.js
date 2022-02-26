@@ -1,14 +1,16 @@
 import React from "react";
 import "./Card.scss";
-const Card = ({ items }) => {
+const Card = ({ data }) => {
   return (
     <div className="mainContainer__grid--cards">
-      <p>{items.title}</p>
-      <div className="mainContainer__grid--cards--img">
+      <div className="mainContainer__grid--img">
         <img
-          src={`https://www.fbi.gov/${items.path}/@@images/image`}
+          src={`https://www.fbi.gov/${data.path}/@@images/image`}
           alt="fbi"
         />
+      </div>
+      <div className="mainContainer__grid--text">
+        <p>{data.title}</p>
       </div>
     </div>
   );
